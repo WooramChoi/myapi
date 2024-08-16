@@ -1,0 +1,1 @@
+from .board_controller import router as board_router
