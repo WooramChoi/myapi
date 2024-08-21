@@ -1,3 +1,8 @@
+# "launch.json" 을 실행할 경우: app 를 include 하기 위해 app directory 를 append
+import sys, os
+if __name__ != "__main__":
+    sys.path.append(os.path.join(os.getcwd(), 'app'))
+
 from typing import Union
 from fastapi import FastAPI, Request
 from fastapi.encoders import jsonable_encoder
