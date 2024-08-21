@@ -12,6 +12,8 @@
             "args": [
                 "app.main:app",
                 "--reload",
+                "--app-dir",
+                "${workspaceFolder}/app",
                 "--host",
                 "0.0.0.0",
                 "--port",
