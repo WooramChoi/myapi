@@ -13,6 +13,14 @@ class BoardAdd(BaseModel):
     name: str|None = None
     pwd: str|None = None
 
+class BoardModify(BaseModel):
+    title: str
+    content: str
+    plain_text: str
+    name: str|None = None
+    pwd: str|None = None
+    new_pwd: str|None = None
+
 class BoardSearch(BaseModel):
     name: str|None = None
     toc: str|None = None # title + content

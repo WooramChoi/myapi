@@ -42,3 +42,8 @@ async def board_details(seq_board: int, session = Depends(get_async_session)):
 
     board_detail = BoardDetails(**board.__dict__)
     return board_detail
+
+@router.patch("/boards/{seq_board}")
+async def board_modify(seq_board: int, session = Depends(get_async_session)):
+    
+    pass
