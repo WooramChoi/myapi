@@ -101,7 +101,7 @@ async def read_root():
     return {"msg": "Hello, World!"}
 
 def main():
-    uvicorn.run(app, log_level="debug", host='0.0.0.0', port=8001)
+    uvicorn.run(app, log_level="debug", host='0.0.0.0', port=9000)
 
 if __name__ == '__main__':
     main()

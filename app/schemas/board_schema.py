@@ -1,4 +1,5 @@
 from pydantic import BaseModel, Field
+from typing import Optional
 
 class BoardDetails(BaseModel):
     seq_board: int
@@ -22,6 +23,6 @@ class BoardModify(BaseModel):
     new_pwd: str|None = None
 
 class BoardSearch(BaseModel):
-    name: str|None = None
-    toc: str|None = None # title + content
-    use: bool|None = None
+    name: Optional[str] = None
+    toc: Optional[str] = None # title + content
+    use: Optional[bool] = None

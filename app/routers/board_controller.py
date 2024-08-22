@@ -9,9 +9,9 @@ logger = get_logger()
 router = APIRouter()
 
 @router.get("/boards")
-async def board_list(board_search: BoardSearch, session = Depends(get_async_session)):
+async def board_list(board_search: BoardSearch = Depends(), session = Depends(get_async_session)):
 
-    boards = await find_board(session)
+    boards = await find_board(session, board_search)
 
     list_board = []
     for board in boards:

@@ -15,5 +15,5 @@ class Board(TimestampMixin, Base):
     content: Mapped[Optional[str]] = mapped_column(String(9000))
     plain_text: Mapped[Optional[str]] = mapped_column(String(3000))
     yn_use: Mapped[bool] = mapped_column(default=True)
-    name: Mapped[Optional[str]] = mapped_column(String(100))
+    name: Mapped[Optional[str]] = mapped_column(String(150))
     pwd: Mapped[Optional[str]] = mapped_column(String(255))
